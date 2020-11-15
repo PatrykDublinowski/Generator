@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: rebeccapurple;
+    color: white;
+	margin:0;
+	font-family: "Poppins", sans-serif;
+
+}
+.container{
+	background-color: rebeccapurple;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 60vh;
+}
+
+.buttons { 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center; 
+}
+
+.btn {
+  color: #fff;
+  cursor: pointer;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%; 
+}
+.btn:hover { text-decoration: none; }
+
+.btn1 {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 2px solid;
+  outline-color: rgba(236, 182, 2);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.active, .btn1:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(236, 182, 2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+
+.loader {
+  position: static;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top:-40px;
+  padding-bottom: 20px;
+}
+.headerText{
+  position: static;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  text-transform:none;
+}
+.loader:after {
+    content:'_';
+  }
+  
+.header{
+	text-align:center;
+	font-size:50px;
+}
+.pw-container {
+    background-color: rgb(46, 12, 80);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    min-width: 400px; 
+}
+
+.pw-header {
+    padding: 1rem;
+	text-align: center;
+}
+
+.pw {
+    background-color: rgb(69, 28, 109);
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+    overflow: auto;
+}
+
+.pw button {
+    background-color: white;
+    border: none;
+    color: rgb(29, 2, 56);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0.25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0, 20%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+}
+
+.pw:hover button {
+    opacity: 1;
+    transform: translate(0, 0%);
+}
+
+.pw-body {
+    padding: 0 1rem 1rem;
+}
+
+.form-control {
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 0;
+}
+
+.generate {
+    background-color: #ecb602;
+    border: none;
+    color: rebeccapurple;
+    cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+.footer{
+	text-align:center;
+	color:#fff;
+	
+}
+.footer a{
+	color:#fff;
+}
+.footer a:hover{
+	color:#ccc;
+}
+
+/* MEDIA */
+@media(min-width: 600px) {
+    .btn{  
+		margin: 0 1em 2em;
+	}  
+  }
+@media (min-width: 1000px) {
+	.buttons{
+		flex-direction:row;
+        justify-content: space-between;
+    }
+}
