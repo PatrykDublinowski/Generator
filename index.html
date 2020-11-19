@@ -5,12 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Generator haseł</title>
         <link rel="stylesheet" href="css/style.css" />
+		<script src="js/copy_to_clipboard.js" defer></script>
+		<script src="js/generate_pesel.js" defer></script>
         <script src="js/generate_pass.js" defer></script>
 		<script src="js/text_loader.js" defer></script>
 		<script src="js/change_content.js" defer></script>
+
     </head>
     <body>
-	<section>
+	<section id="section">
 		<h1 class="headerText">Generator</h1>
 		<div class="loader" id="loader"></div>
 			<div class="buttons" id="buttons">
@@ -21,15 +24,15 @@
 				<a href="#" class="btn btn1" id="guidButton">GUID</a>
 			</div>
 		<div class="container" id="pass">
-        <div class="pw-container">
-            <div class="pw-header">
+        <div class="cnt-container">
+            <div class="cnt-header">
 				<h1>HASŁO</h1>
-                <div class="pw">
+                <div class="val" id="copyPassField">
                     <span id="pw"></span>
-                    <button id="copy">Kopiuj</button>
+                    <button id="copyPass">Kopiuj</button>
                 </div>
             </div>
-            <div class="pw-body">
+            <div class="cnt-body">
                 <div class="form-control">
                     <label for="len">Długość hasła</label>
                     <input id="len" value="15" type="number" min="4" max="30" />
@@ -50,7 +53,7 @@
                     <label for="symbol">Uwzględnij symbole</label>
                     <input id="symbol" type="checkbox" />
                 </div>
-                <button class="generate" id="generate">
+                <button class="generate" id="generatePass">
                     Generuj
                 </button>
             </div>
@@ -58,36 +61,32 @@
 		</div>
 		
 		<div class="container" id="pesel">
-        <div class="pw-container">
-            <div class="pw-header">
+        <div class="cnt-container">
+            <div class="cnt-header">
 				<h1>PESEL</h1>
-                <div class="pw">
-                    <span id="pw"></span>
-                    <button id="copy">Kopiuj</button>
+                <div class="val" id="copyPeselField">
+                    <span id="ps"></span>
+                    <button id="copyPesel">Kopiuj</button>
                 </div>
             </div>
-            <div class="pw-body">
+            <div class="cnt-body">
                 <div class="form-control">
-                    <label for="len">Długość hasła</label>
-                    <input id="len" value="15" type="number" min="4" max="30" />
+                    <label for="date">Data urodzenia</label>
+                    <input type="date" id="date" value="" min="1800-01-01" max="2299-12-31">
+                </div>
+				<div class="form-control">
+                    <label for="all">Wszyscy</label>
+                    <input id="all" type="radio" name="sex" checked/>
                 </div>
                 <div class="form-control">
-                    <label for="upper">Uwzględnij duże litery</label>
-                    <input id="upper" type="checkbox" />
+                    <label for="woman">Kobieta</label>
+                    <input id="woman" type="radio" name="sex" />
                 </div>
                 <div class="form-control">
-                    <label for="lower">Uwzględnij małe litery</label>
-                    <input id="lower" type="checkbox" />
+                    <label for="man">Mężczyzna</label>
+                    <input id="man" type="radio" name="sex" />
                 </div>
-                <div class="form-control">
-                    <label for="number">Uwzględnij liczby</label>
-                    <input id="number" type="checkbox" />
-                </div>
-                <div class="form-control">
-                    <label for="symbol">Uwzględnij symbole</label>
-                    <input id="symbol" type="checkbox" />
-                </div>
-                <button class="generate" id="generate">
+                <button class="generate" id="generatePesel">
                     Generuj
                 </button>
             </div>

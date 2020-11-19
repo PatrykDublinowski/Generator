@@ -1,11 +1,11 @@
-const pwEl       = document.getElementById("pw");
-const copyEl     = document.getElementById("copy");
-const lenEl      = document.getElementById("len");
-const upperEl    = document.getElementById("upper");
-const lowerEl    = document.getElementById("lower");
-const numberEl   = document.getElementById("number");
-const symbolEl   = document.getElementById("symbol");
-const generateEl = document.getElementById("generate");
+const pwEl          = document.getElementById("pw");
+const copyPassField = document.getElementById("copyPassField");
+const lenEl         = document.getElementById("len");
+const upperEl       = document.getElementById("upper");
+const lowerEl       = document.getElementById("lower");
+const numberEl      = document.getElementById("number");
+const symbolEl      = document.getElementById("symbol");
+const genPassEl     = document.getElementById("generatePass");
 
 const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
@@ -30,30 +30,34 @@ function getSymbol() {
 
 function generatePassword() {
     const len = lenEl.value;
+	
+	var password = "";
+	if (len >= parseInt(lenEl.min) && len <= parseInt(lenEl.max)){
 
-    let password = "";
+		if (upperEl.checked) {
+			password += getUppercase();
+		}
 
-    if (upperEl.checked) {
-        password += getUppercase();
-    }
+		if (lowerEl.checked) {
+			password += getLowercase();
+		}
 
-    if (lowerEl.checked) {
-        password += getLowercase();
-    }
+		if (numberEl.checked) {
+			password += getNumber();
+		}
 
-    if (numberEl.checked) {
-        password += getNumber();
-    }
+		if (symbolEl.checked) {
+			password += getSymbol();
+		}
 
-    if (symbolEl.checked) {
-        password += getSymbol();
-    }
-
-    for (let i = password.length; i < len; i++) {
-        const x = generateX();
-        password += x;
-    }
-
+		for (let i = password.length; i < len; i++) {
+			const x = generateX();
+			password += x;
+		}
+	} else {
+		lenEl.value = 15;
+	}
+	
     pwEl.innerText = password;
 }
 
@@ -80,20 +84,5 @@ function generateX() {
     return xs[Math.floor(Math.random() * xs.length)];
 }
 
-generateEl.addEventListener("click", generatePassword);
-
-copyEl.addEventListener("click", () => {
-    const textarea = document.createElement("textarea");
-    const password = pwEl.innerText;
-
-    if (!password) {
-        return;
-    }
-
-    textarea.value = password;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand("copy");
-    textarea.remove();
-    alert("Hasło skopiowane do schowka");
-});
+genPassEl.addEventListener("click", generatePassword);
+copyPassField.addEventListener("click", () => {copyToClipboard(pwEl.innerText)});
