@@ -96,18 +96,18 @@ body {
 	text-align:center;
 	font-size:50px;
 }
-.pw-container {
+.cnt-container {
     background-color: rgb(46, 12, 80);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     min-width: 400px; 
 }
 
-.pw-header {
+.cnt-header {
     padding: 1rem;
 	text-align: center;
 }
 
-.pw {
+.val {
     background-color: rgb(69, 28, 109);
     display: flex;
     font-size: 1.5rem;
@@ -119,7 +119,7 @@ body {
     overflow: auto;
 }
 
-.pw button {
+.val button {
     background-color: white;
     border: none;
     color: rgb(29, 2, 56);
@@ -135,12 +135,16 @@ body {
     opacity: 0;
 }
 
-.pw:hover button {
+.val:hover {
+	cursor: pointer;
+}
+
+.val:hover button {
     opacity: 1;
     transform: translate(0, 0%);
 }
 
-.pw-body {
+.cnt-body {
     padding: 0 1rem 1rem;
 }
 
