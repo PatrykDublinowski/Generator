@@ -6,6 +6,7 @@
         <title>Generator haseł</title>
         <link rel="stylesheet" href="css/style.css" />
 		<script src="js/copy_to_clipboard.js" defer></script>
+		<script src="js/generate_regon.js" defer></script>
 		<script src="js/generate_pesel.js" defer></script>
         <script src="js/generate_pass.js" defer></script>
 		<script src="js/text_loader.js" defer></script>
@@ -93,6 +94,30 @@
         </div>
 		</div>
 		
+		<div class="container" id="regon">
+        <div class="cnt-container">
+            <div class="cnt-header">
+				<h1>REGON</h1>
+                <div class="val" id="copyRegonField">
+                    <span id="rg"></span>
+                    <button id="copyRegon">Kopiuj</button>
+                </div>
+            </div>
+            <div class="cnt-body">
+                <div class="form-control">
+                    <label for="nine">9 cyfrowy</label>
+                    <input id="nine" type="radio" name="regon" checked/>
+                </div>
+                <div class="form-control">
+                    <label for="fourteen">14 cyfrowy</label>
+                    <input id="fourteen" type="radio" name="regon" />
+                </div>
+                <button class="generate" id="generateRegon">
+                    Generuj
+                </button>
+            </div>
+        </div>
+		</div>
 		
 		<div class="footer">
 		  <p>Wykonał: <a href="mailto:patryk@dublinowski.pl">Patryk Dublinowski</a></p>
