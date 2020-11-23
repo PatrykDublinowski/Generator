@@ -6,6 +6,7 @@
         <title>Generator haseł</title>
         <link rel="stylesheet" href="css/style.css" />
 		<script src="js/copy_to_clipboard.js" defer></script>
+		<script src="js/generate_nip.js" defer></script>
 		<script src="js/generate_regon.js" defer></script>
 		<script src="js/generate_pesel.js" defer></script>
         <script src="js/generate_pass.js" defer></script>
@@ -40,7 +41,7 @@
                 </div>
                 <div class="form-control">
                     <label for="upper">Uwzględnij duże litery</label>
-                    <input id="upper" type="checkbox" />
+                    <input id="upper" type="checkbox" checked/>
                 </div>
                 <div class="form-control">
                     <label for="lower">Uwzględnij małe litery</label>
@@ -113,6 +114,31 @@
                     <input id="fourteen" type="radio" name="regon" />
                 </div>
                 <button class="generate" id="generateRegon">
+                    Generuj
+                </button>
+            </div>
+        </div>
+		</div>
+		
+		<div class="container" id="nip">
+        <div class="cnt-container">
+            <div class="cnt-header">
+				<h1>NIP</h1>
+                <div class="val" id="copyNipField">
+                    <span id="np"></span>
+                    <button id="copyNip">Kopiuj</button>
+                </div>
+            </div>
+            <div class="cnt-body">
+                <div class="form-control">
+                    <label for="separator">Dodaj separator - </label>
+                    <input id="separator" type="checkbox" name="separator"/>
+                </div>
+                <div class="form-control">
+                    <label for="pl">Dodaj prefix PL</label>
+                    <input id="pl" type="checkbox" name="pl" />
+                </div>
+                <button class="generate" id="generateNip">
                     Generuj
                 </button>
             </div>
