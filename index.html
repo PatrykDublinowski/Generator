@@ -6,6 +6,7 @@
         <title>Generator haseł</title>
         <link rel="stylesheet" href="css/style.css" />
 		<script src="js/copy_to_clipboard.js" defer></script>
+		<script src="js/generate_dowod.js" defer></script>
 		<script src="js/generate_nip.js" defer></script>
 		<script src="js/generate_regon.js" defer></script>
 		<script src="js/generate_pesel.js" defer></script>
@@ -23,7 +24,7 @@
 				<a href="#" class="btn btn1" id="peselButton">PESEL</a> 
 				<a href="#" class="btn btn1" id="regonButton">REGON</a> 
 				<a href="#" class="btn btn1" id="nipButton">NIP</a> 
-				<a href="#" class="btn btn1" id="guidButton">GUID</a>
+				<a href="#" class="btn btn1" id="dowodButton">NR DOWODU </a>
 			</div>
 		<div class="container" id="pass">
         <div class="cnt-container">
@@ -139,6 +140,27 @@
                     <input id="pl" type="checkbox" name="pl" />
                 </div>
                 <button class="generate" id="generateNip">
+                    Generuj
+                </button>
+            </div>
+        </div>
+		</div>
+		
+		<div class="container" id="dowod">
+        <div class="cnt-container">
+            <div class="cnt-header">
+				<h1>Numer dowodu osobistego</h1>
+                <div class="val" id="copyDowodField">
+                    <span id="dw"></span>
+                    <button id="copyDowod">Kopiuj</button>
+                </div>
+            </div>
+            <div class="cnt-body">
+				<div class="form-control">
+                    <label for="seria">Oddziel serie</label>
+                    <input id="seria" type="checkbox" name="seria" />
+                </div>
+                <button class="generate" id="generateDowod">
                     Generuj
                 </button>
             </div>
