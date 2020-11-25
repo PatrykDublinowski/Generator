@@ -28,10 +28,21 @@ body {
 .buttons { 
     align-items: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
     padding: 1em;
     text-align: center; 
+	justify-content: center;
+	z-index:5;
+}
+
+#toggle {
+	display:none;
+	align-items: center;
+    padding: 1em;
+    text-align: center; 
+	justify-content: center;
+	margin: 2em auto;
 }
 
 .btn {
@@ -100,6 +111,7 @@ body {
     background-color: rgb(46, 12, 80);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     min-width: 400px; 
+	z-index: 5;
 }
 
 .cnt-header {
@@ -179,15 +191,44 @@ body {
 	color:#ccc;
 }
 
+.mark {
+	font-size:30px;
+	position:fixed;
+	top: -1vh;
+	transform:translateY(0);
+	animation: fall 5s linear forwards;
+	z-index: 0;
+}
+
+@keyframes fall {
+	to {
+		transform:translateY(105vh);
+	}
+}
+
 /* MEDIA */
 @media(min-width: 600px) {
     .btn{  
 		margin: 0 1em 2em;
 	}  
   }
-@media (min-width: 1000px) {
+@media (max-width: 1000px) {
 	.buttons{
-		flex-direction:row;
-        justify-content: space-between;
+		/*flex-direction:row;
+        justify-content: space-between;*/
+		display:none;
+		
     }
+	.buttons.show{
+		display:flex;
+		flex-direction:column;
+	}
+	#toggle {
+		display: flex;
+	}
+}
+@media(max-width: 760px) {
+	.cnt-container {
+		min-width: 300px; 
+	}
 }

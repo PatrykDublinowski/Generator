@@ -2,24 +2,27 @@ var words = [
   'Hasła',
   'PESEL',
   'NIP',
-  'REGON'
+  'REGON',
+  'NUMERU DOWODU'
 ];
 var letters = "abcdefghijklmnopqrstuvwxyz#%&^+=-",
     speed = 350,
     steps = 6,
     loader = document.querySelector('#loader');
 
-function getRandomWord() {
-  var randomWord = words[Math.floor(Math.random() * words.length)];
-  return randomWord;
-}
+var index = 0;
+
 function getRandomLetter() {
   var randomLetter = letters[Math.floor(Math.random() * letters.length)];
   return randomLetter;
 }
 
 function randomWordLoop() {
-  var word = getRandomWord();
+  var word = words[index];
+  
+  index++;
+  index = ((index === words.length) ? 0 : index);
+  
   var textLength = word.length;
   for(var i = 0; i < textLength; i++) {    
     (function(i,word){

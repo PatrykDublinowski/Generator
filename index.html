@@ -3,28 +3,36 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Generator haseł</title>
+        <title>Generatory</title>
+		<link rel="icon" type="image/png" href="img/icon.png"/>
         <link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/toastr.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="js/toastr.js" defer></script>
 		<script src="js/copy_to_clipboard.js" defer></script>
 		<script src="js/generate_dowod.js" defer></script>
 		<script src="js/generate_nip.js" defer></script>
 		<script src="js/generate_regon.js" defer></script>
 		<script src="js/generate_pesel.js" defer></script>
-        <script src="js/generate_pass.js" defer></script>
+        <script src="js/generate_pass.js" defer></script> 
 		<script src="js/text_loader.js" defer></script>
 		<script src="js/change_content.js" defer></script>
-
+		<script src="js/toggle.js" defer></script>
+		<script src="js/falling_marks.js" defer></script>
+		<script src="js/scroll.js" defer></script>
     </head>
     <body>
 	<section id="section">
 		<h1 class="headerText">Generator</h1>
 		<div class="loader" id="loader"></div>
+		<a href="#" class="btn btn1" id="toggle"><i class="fa fa-bars"></i></a> 
 			<div class="buttons" id="buttons">
-				<a href="#" class="btn btn1 active" id="passButton">HASŁO</a> 
-				<a href="#" class="btn btn1" id="peselButton">PESEL</a> 
-				<a href="#" class="btn btn1" id="regonButton">REGON</a> 
-				<a href="#" class="btn btn1" id="nipButton">NIP</a> 
-				<a href="#" class="btn btn1" id="dowodButton">NR DOWODU </a>
+				<a href="#pass" class="btn btn1 active" id="passButton">HASŁO</a> 
+				<a href="#pesel" class="btn btn1" id="peselButton">PESEL</a> 
+				<a href="#regon" class="btn btn1" id="regonButton">REGON</a> 
+				<a href="#nip" class="btn btn1" id="nipButton">NIP</a> 
+				<a href="#dowod" class="btn btn1" id="dowodButton">NR DOWODU </a>
 			</div>
 		<div class="container" id="pass">
         <div class="cnt-container">
