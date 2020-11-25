@@ -11,5 +11,7 @@ function copyToClipboard(value){
     textarea.select();
     document.execCommand("copy");
     textarea.remove();
-    alert("Skopiowano do schowka");
+
+	toastr.options.timeOut = 2000;
+	toastr.success('Skopiowano do schowka');
 }

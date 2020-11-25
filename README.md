@@ -1,5 +1,5 @@
 # Generator
-> This is website which generate random values - usefull to create passwords.
+> This is website which generate password, PESEL, NIP, REGON and ID Number.
 
 ## Table of contents
 * [General info](#general-info)
@@ -11,33 +11,48 @@
 * [Contact](#contact)
 
 ## General info
-This is website which generate random values - usefull to create passwords. The application in the future will be expanded with new generators like PESEL generator or NIP generator.
+This is website which generate random values useful to create password. Website is able too to generate PESEL, NIP, REGON and ID Number. The generated values are fully validated. Will be useful for programmers or testers.
+
+The website except of generate functionality has a couple interesting animation effects. For instance automaticaly text writing animation or after click each generate button the website show us falling characters on the background.
+
+The website is fully scalable so is adapted to be used on phones or tablets.
 
 
 ## Screenshots
---Appear soon--
+<img src="screens/screen1.png">
+<img src="screens/screen2.png">
+<img src="screens/screen3.png">
+<img src="screens/screen4.png">
+<img src="screens/screen5.png">
+<img src="screens/screen6.png">
 
 ## Technologies
 * JS
 * HTML
 * CSS
 
+External add-ons:
+
+TOASTR - https://codeseven.github.io/toastr/
+
 ## Features
 List of features ready and TODOs for future development
-* Add new generators for instance: PESEL generator, NIP generator etc.
-* Create special menu for mobile devices 
+* Add a new generator if necessary
 
 To-do list:
 * Design and create a page view
 * Create responsive menu as buttons
 * Create changing content without refresh page (for each generator)
 * Add some effects to increasing the attractiveness of the website
+* Add generators for password, PESEL, NIP, REGON, ID Number
+* Add some effect like falling random characters - after click each generate button
+* Make the menu more convenient on mobile devices
 
 ## Status
-Project is: _in progress
+Project is: _finished
 
 ## Inspiration
-For my own needs - generators are really usefull for programmers :)
+For refresh my JS, CSS and HTML knowledge and for my own needs - generators are really usefull for programmers :) 
 
 ## Contact
 Created by [@PatrykDublinowski] - feel free to contact me!
