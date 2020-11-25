@@ -13,18 +13,20 @@
 ## General info
 This is website which generate random values useful to create password. Website is able too to generate PESEL, NIP, REGON and ID Number. The generated values are fully validated. Will be useful for programmers or testers.
 
+After generate some values user can copy them to clipboard with one click on the area where the generated values appear (when you hover over this field, the copy button appears). After copying, the page on the right indicates that the value is already in the clipboard.
+
 The website except of generate functionality has a couple interesting animation effects. For instance automaticaly text writing animation or after click each generate button the website show us falling characters on the background.
 
 The website is fully scalable so is adapted to be used on phones or tablets.
 
 
 ## Screenshots
-<img src="screens/screen1.png">
-<img src="screens/screen2.png">
-<img src="screens/screen3.png">
-<img src="screens/screen4.png">
-<img src="screens/screen5.png">
-<img src="screens/screen6.png">
+<img src="img/screens/screen1.png">
+<img src="img/screens/screen2.png">
+<img src="img/screens/screen3.png">
+<img src="img/screens/screen4.png">
+<img src="img/screens/screen5.png">
+<img src="img/screens/screen6.png">
 
 ## Technologies
 * JS
